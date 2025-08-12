@@ -1,0 +1,590 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #181b29;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: transparent;
+  z-index: 100;
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #40c057;
+}
+
+nav ul li a.active {
+  color: #40c057;
+  font-weight: 700;
+}
+
+/* Main Content Container */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 8rem 6rem 4rem 6rem;
+  gap: 4rem;
+  min-height: 100vh;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.left-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.subheading {
+  font-size: 1.75rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+}
+
+.subheading .highlight {
+  font-weight: 700;
+  color: #40c057;
+  position: relative;
+  letter-spacing: 0.03em;
+  /* Partial letter outline effect */
+  -webkit-text-stroke: 0.8px #40c057;
+  color: transparent;
+  background: linear-gradient(90deg, #40c057 50%, transparent 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textFill 2s forwards;
+}
+
+@keyframes textFill {
+  to {
+    color: #40c057;
+    -webkit-text-stroke: 0;
+    background: none;
+  }
+}
+
+.bio {
+  font-size: 1rem;
+  color: #cfd8dc;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.btn-download {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #40c057;
+  color: #181b29;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px #40c057;
+  transition: box-shadow 0.3s ease;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.btn-download:hover {
+  box-shadow: 0 0 20px #40c057, 0 0 40px #40c057;
+}
+
+/* Social Icons Container */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icons a {
+  border: 2px solid #40c057;
+  color: #40c057;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.social-icons a:hover {
+  background-color: #40c057;
+  color: #181b29;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px #40c05750;
+}
+
+/* Profile photo */
+.profile-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left and Right bright green arcs */
+.profile-photo-wrapper::before,
+.profile-photo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 14px;
+  border-radius: 50%;
+  border: 3px solid #40c057;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.profile-photo-wrapper::before {
+  left: 0;
+  border-right: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.profile-photo-wrapper::after {
+  right: 0;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 6rem 2rem 2rem 2rem;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section {
+    max-width: 100%;
+  }
+
+  .right-section {
+    max-width: 280px;
+  }
+
+  .profile-photo-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #40c057;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, stroke 0.3s ease;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: #40c057;
+  fill: none;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.icon-link:hover {
+  background-color: #40c057;
+}
+
+.icon-link:hover .icon {
+  fill: #181b29;
+  stroke: #181b29;
+}
+
+
+/* education */
+/* Education Section */
+.education-section {
+  background-color: #181b29;
+  padding: 5rem 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.edu-card {
+  background-color: #1f2335;
+  border-left: 4px solid #40c057;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(64, 192, 87, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(64, 192, 87, 0.3);
+}
+
+.edu-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #40c057;
+  margin-bottom: 0.8rem;
+}
+
+.edu-card p {
+  font-size: 1rem;
+  color: #cfd8dc;
+  margin-bottom: 0.3rem;
+}
+
+.edu-card strong {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+
+
+
+
+/* Skills badges */
+.skill {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.skill.html { background: #e44d26; }
+.skill.css { background: #264de4; }
+.skill.js { background: #f7df1e; color: black; }
+.skill.tailwind { background: #38b2ac; }
+.skill.react { background: #61dafb; color: black; }
+.skill.node { background: #3c873a; }
+.skill.c { background: #283593; }
+.skill.python { background: #306998; }
+.skill.mysql { background: #00758f; }
+.skill.word { background: #2b579a; }
+.skill.ppt { background: #d24726; }
+
+#experience, #skills {
+    margin: 40px 0;
+}
+
+#experience h2, #skills h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* Experience & Skills Section */
+.experience-skills {
+  background-color: #181b29;
+  padding: 5rem 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.experience-skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* content left aligned inside container */
+}
+
+.experience-skills-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Experience Card */
+.experience-card {
+  background-color: #1f2335;
+  border-left: 4px solid #40c057;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(64, 192, 87, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(64, 192, 87, 0.3);
+}
+
+.experience-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #40c057;
+  margin-bottom: 1rem;
+}
+
+.experience-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #cfd8dc;
+}
+
+.experience-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Skills Section */
+.skills h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #40c057;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.skills p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.skills {
+  background-color: #1f2335;
+  border-left: 4px solid #40c057;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(64, 192, 87, 0.15);
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(64, 192, 87, 0.3);
+}
+
+
+/* Skill badges keep existing styles */
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .experience-skills {
+    padding: 3rem 1.5rem;
+  }
+
+  .experience-skills-container {
+    text-align: center;
+  }
+
+  .experience-card,
+  .skills p {
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* Contact Section */
+.contact-section {
+  background-color: #181b29;
+  padding: 5rem 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-card {
+  background-color: #1f2335;
+  border-left: 4px solid #40c057;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(64, 192, 87, 0.15);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #cfd8dc;
+  line-height: 1.6;
+  user-select: text;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(64, 192, 87, 0.3);
+}
+
+.contact-card p {
+  margin-bottom: 1rem;
+}
+
+.contact-card a {
+  color: #40c057;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+  color: #72d676;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-container {
+    text-align: center;
+  }
+
+  .contact-card {
+    text-align: center;
+    max-width: 100%;
+  }
+}
