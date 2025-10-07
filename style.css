@@ -793,7 +793,7 @@ main {
 /* Contact Section */
 .contact-section {
   background-color: var(--bg);
-  padding: 5rem 6rem;
+  padding: 5rem 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
 }
@@ -1028,3 +1028,4 @@ main {
     display: block;
   }
 }
+
