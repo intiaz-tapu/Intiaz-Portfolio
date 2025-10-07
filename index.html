@@ -5,51 +5,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Intiaz Hossen Portfolio</title>
-
-  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome for Social Icons -->
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-
 </head>
 <link rel="stylesheet" href="style.css">
 
 <body>
   <nav>
-    <div class="logo">Intiaz's Portfolio.</div>
-     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <div class="logo"><span class="accent">Intiaz's</span> Portfolio.</div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul>
       <li><a href="#" class="active">Home</a></li>
-      <!-- <li><a href="#">About</a></li> -->
-      <li><a href="#education">Education</a></li>
+      <li><a href="#experience-skills">Skills & experience</a></li>
+      <li><a href="#work">My Work</a></li>
 
-      <!-- <li><a href="#">Education</a></li> -->
-      <li><a href="#experience-skills">Experience & Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <section class="left-section">
+      <h3>Hello, I'm</h3>
       <h1>Md. Intiaz Hossen</h1>
       <div class="subheading">
-        I’m a&nbsp;
-        <span class="highlight">Front-End Developer & Designer</span>
+        And I'm a&nbsp;
+        <span class="highlight">Web Developer</span>
       </div>
       <p class="bio">
-        I’m a passionate Front-End Developer and Designer focused on creating clean, responsive, and visually engaging
-        websites. I combine creativity with technical skills to build intuitive user experiences that perform flawlessly
-        across devices, bringing ideas to life with detail and quality.
+        I design and develop responsive, user-focused websites that combine creativity, performance, and precision
+        bringing ideas to life through thoughtful, modern design.
 
       </p>
-      <button class="btn-download" onclick="window.open('CV.pdf', '_blank')">Download CV</button>
-
       </div>
+
       <div class="social-icons" aria-label="Social Media Links">
         <a href="https://github.com/intiaz-tapu" target="_blank" rel="noopener" aria-label="GitHub" class="icon-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#40c057" stroke-width="2"
@@ -59,7 +50,7 @@
           </svg>
         </a>
 
-        <a href="https://www.linkedin.com/in/md-intiaz-hossen-9ab2b42b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener"
+        <a href="https://www.linkedin.com/in/md-intiaz-hossen-9ab2b42b5/" target="_blank" rel="noopener"
           aria-label="LinkedIn" class="icon-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#40c057" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -69,7 +60,7 @@
           </svg>
         </a>
 
-        <a href="https://www.facebook.com/share/16YoHJvQG8/" target="_blank" rel="noopener" aria-label="Facebook"
+        <a href="https://www.facebook.com/share/1M1E89A5J9/" target="_blank" rel="noopener" aria-label="Facebook"
           class="icon-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#40c057" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" class="icon">
@@ -77,91 +68,115 @@
           </svg>
         </a>
       </div>
+      <button class="btn-download" onclick="window.open('Intiaz_CV.pdf', '_blank')">Download CV</button>
     </section>
 
     <section class="right-section">
       <div class="profile-photo-wrapper">
-        <!-- Replace src with your real profile photo -->
-        <img src="profile.jpg" alt="Lucius Meshach Profile Photo" />
+        <img src="profile.jpg" alt="Profile Photo" />
       </div>
     </section>
   </main>
-  <!-- Education Section -->
-  <!-- Education Section -->
-  <section id="education" class="education-section">
-    <div class="education-container">
-      <h2>Education</h2>
-
-      <div class="edu-card">
-        <h3>Bachelor of Science &amp; Engineering</h3>
-        <p><strong>Computer Science &amp; Engineering (CSE)</strong></p>
-        <p><strong>Southeast University</strong></p>
-        <p><strong>2020-2024</strong></p>
-      </div>
-
-      <div class="edu-card">
-        <h3>Higher Secondary Certificate</h3>
-        <p><strong>Naogaon GOVT College</strong></p>
-        <p><strong>Science</strong></p>
-        <p><strong>2019</strong></p>
-      </div>
-
-      <div class="edu-card">
-        <h3>Secondary School Certificate</h3>
-        <p><strong>Professor MEH Arif School</strong></p>
-        <p><strong>Science</strong></p>
-        <p><strong>2017</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <!-- Experience & Skills Section -->
   <section id="experience-skills" class="experience-skills">
     <div class="experience-skills-container">
-      <h2>Experience</h2>
+      <h2>Skills &amp; experience</h2>
 
-      <div class="experience-card">
-        <h3>Frontend Developer Intern — <em>Orion Group</em></h3>
-        <ul>
-          <li>Developed responsive web pages using <strong>HTML5</strong>, <strong>CSS3</strong>, and
-            <strong>JavaScript</strong>.
-          </li>
-          <li>Collaborated with designers to create intuitive <strong>UI/UX</strong> experiences.</li>
-          <li>Worked on optimizing website performance and accessibility.</li>
-        </ul>
-      </div>
+      <div class="skills-experience-grid">
+        <div class="skills">
+          <h3>Frontend Development:</h3>
+          <p>
+            <span class="skill html">HTML5</span>
+            <span class="skill css">CSS3</span>
+            <span class="skill js">JavaScript</span>
+            <span class="skill tailwind">TailwindCSS</span>
+          </p>
 
-      <h2>Skills</h2>
+          <h3>Currently Learning:</h3>
+          <p>
+            <span class="skill react">React</span>
+            <span class="skill node">Node.js</span>
+          </p>
+        </div>
 
-      <div class="skills">
-        <h3>Frontend Development:</h3>
-        <p>
-          <span class="skill html">HTML5</span>
-          <span class="skill css">CSS3</span>
-          <span class="skill tailwind">TailwindCSS</span>
-          <span class="skill js">JavaScript</span>
-          
-        </p>
-
-        <h3>Currently Learning:</h3>
-        <p>
-          <span class="skill js">TypeScript</span>
-          <span class="skill react">React</span>
-          <span class="skill node">Next.js</span>
-        </p>
+        <div class="experience-list">
+          <div class="experience-card">
+            <h3>Frontend Developer-Intern</h3>
+            <h3>Orion Group</h3>
+            <ul>
+              <li>Developed responsive web pages using <strong>HTML5</strong>, <strong>CSS3</strong>, and
+                <strong>JavaScript</strong>.
+              </li>
+              <li>Collaborated with designers to create intuitive <strong>UI/UX</strong> experiences.</li>
+              <li>Worked on optimizing website performance and accessibility.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  </div>
+  <section id="work" class="work-section">
+    <div class="work-container">
+      <h2>My Work</h2>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <h3>Orion Clone Website (HTML, CSS, &amp; JS)</h3>
+          <img class="work-thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Forion-clone.vercel.app?w=1024"
+            alt="Orion Clone preview" />
+          <!-- <p>Responsive clone of the Orion website with interactive UI elements and animations.</p> -->
+          <a class="btn-visit" href="https://orion-clone.vercel.app" target="_blank" rel="noopener">Visit Project</a>
+        </article>
+
+        <article class="work-card">
+          <h3>Portfolio Website (HTML, CSS, &amp; JS)</h3>
+          <img class="work-thumb"
+            src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fintiaz-portfolio.vercel.app?w=1024"
+            alt="Portfolio preview" />
+          <!-- <p>Responsive portfolio website showcasing projects, skills, and contact information.</p> -->
+          <a class="btn-visit" href="https://intiaz-portfolio.vercel.app" target="_blank" rel="noopener">Visit
+            Project</a>
+        </article>
+
+        <article class="work-card">
+          <h3>Naogaon Govt. College (HTML, CSS, &amp; JS)</h3>
+          <img class="work-thumb"
+            src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnaogaon-govt-college.vercel.app?w=1024"
+            alt="Naogaon Govt. College preview" />
+          <!-- <p>Built a responsive college site with dynamic notices, gallery, and resources.</p> -->
+          <a class="btn-visit" href="https://naogaon-govt-college.vercel.app" target="_blank" rel="noopener">Visit
+            Project</a>
+        </article>
+
+        <article class="work-card">
+          <h3>Coffee Shop (HTML, CSS, &amp; JS)</h3>
+          <img class="work-thumb"
+            src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcoffee-shop-snowy-phi.vercel.app?w=1024"
+            alt="Coffee Shop preview" />
+          <!-- <p>Developed a full coffee shop site with menus, animations, and smooth navigation.</p> -->
+          <a class="btn-visit" href="https://coffee-shop-snowy-phi.vercel.app" target="_blank" rel="noopener">Visit
+            Project</a>
+        </article>
+
+        <article class="work-card">
+          <h3>To-Do App (HTML, CSS, &amp; JS)</h3>
+          <img class="work-thumb"
+            src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fto-do-list-weld-pi.vercel.app?w=1024"
+            alt="To-Do App preview" />
+          <!-- <p>Responsive To-Do List app with task prioritization, date &amp; time scheduling, and a clean modern UI.</p> -->
+          <a class="btn-visit" href="https://to-do-list-weld-pi.vercel.app" target="_blank" rel="noopener">Visit
+            Project</a>
+        </article>
+      </div>
+    </div>
   </section>
+  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="contact-container">
       <h2>Contact</h2>
       <div class="contact-card">
-        <p>📞 <strong>Phone:</strong> 01617212189</p>
-        <p>📧 <strong>Email:</strong> <a href="mailto:intiaztapu@gmail.com">intiaztapu@gmail.com</a></p>
-        <p>📍 <strong>Address:</strong> House-167/2, Shanti Niketon, Mohakhali, Dhaka-1212</p>
+        <p>📞 <strong>Phone:</strong> 01617212189 / 01522122235</p>
+        <p>📧 <strong>Email:</strong> <a href="mailto:intiaztapu@gmail.com"> intiaztapu@gmail.com</a></p>
+        <p>📍 <strong>Address:</strong> 167/2, Shanti Niketon, Tejgaon, Dhaka</p>
       </div>
     </div>
   </section>
@@ -170,8 +185,3 @@
 </body>
 
 </html>
-
-
-
-
-
